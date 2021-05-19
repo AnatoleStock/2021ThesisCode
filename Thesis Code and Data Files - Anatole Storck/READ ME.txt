@@ -1,4 +1,0 @@
-This folder contains the various codes and data sets used in Anatole Storck's bachelor thesis (2021): "The visibility of double neutron star binaries to LISA"
-
-
-
