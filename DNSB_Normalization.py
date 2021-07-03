@@ -59,7 +59,7 @@ t2_local = Master_t1t2['T2']
 # =============================================================================
 # #NO LONGER NEEDED WITH THE MASTER FILE FOR ALL T1s and T2s
 # for i in range(0, 2857):
-#         (a, e, T, t1, t2) = bi.RK4(NSNS_full[0][i], NSNS_full[1][i],
+#         (a, e, T, t1, t2) = bi.RK4_LISA(NSNS_full[0][i], NSNS_full[1][i],
 #                                NSNS_full[2][i], NSNS_full[3][i], 0)
 #         t1_local.append(t1)
 #         t2_local.append(t2)
@@ -80,7 +80,7 @@ for k in range(0, scale_factor):
         if(t1_abs < 0 < t2_abs):
             count += 1
             #Doing the integrator to find t_present (since t_birth shifts it)
-            (a, e, T, t1, t2) = bi.RK4(NSNS_full[0][i], NSNS_full[1][i],
+            (a, e, T, t1, t2) = bi.RK4_LISA(NSNS_full[0][i], NSNS_full[1][i],
                                 NSNS_full[2][i], NSNS_full[3][i], t_birth)
             present_index = T.index(min(T, key=abs)) #We want the index at t_present
             NSNS_visible_present[0].append(a[present_index])
